@@ -9,8 +9,8 @@ while True:
 	sleep(1)
 	reader = SimpleMFRC522()
 	try:
-        	id, text = reader.read()
-        	print(id)
+		id, text = reader.read()
+		print(id)
 		print(text)
 		if id == "219303712431":
 			print("Match, sending turn on/turn off signal")
@@ -20,4 +20,4 @@ while True:
 		print("\nTerminated")
 		exit()
 	finally:
-        	GPIO.cleanup()
+		GPIO.cleanup()
